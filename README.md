@@ -27,7 +27,7 @@ cd java-dsa
 
 ## Contributing
 
-Contributions are welcome! If you'd like to add a new data structure, algorithm, or improve existing code, please follow the [contribution guidelines](CONTRIBUTING.md). Your insights and expertise will make this repository even more valuable for the community.
+Contributions are welcome! If you'd like to add a new data structure, algorithm, or improve existing code, please follow the contribution guidelines. Your insights and expertise will make this repository even more valuable for the community.
 
 ## File Structure
 
@@ -50,13 +50,5 @@ The repository is organized into different directories, each dedicated to a spec
     LICENSE
 
 -->
-
-## Resources
-
-In addition to the code, we have curated a list of recommended resources, including books, online courses, and websites, to further enhance your understanding of data structures and algorithms. Check out the [Resources](resources.md) file for more information.
-
-## License
-
-This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. Feel free to use the code for personal or educational purposes. If you plan to use it in a larger project, we recommend reviewing the license terms.
 
 Happy coding!
