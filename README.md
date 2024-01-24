@@ -8,8 +8,6 @@ Welcome to the "Data Structures and Algorithms in Java" repository! This reposit
 2. [Usage](#usage)
 3. [Contributing](#contributing)
 4. [File Structure](#file-structure)
-5. [Resources](#resources)
-6. [License](#license)
 
 ## Introduction
 
