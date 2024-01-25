@@ -18,7 +18,7 @@ This repository is designed to provide a hands-on approach to learning and imple
 Feel free to explore the repository and use the code for educational purposes. Each Java file is self-contained and comes with comments to explain the purpose, implementation, and usage of the specific data structure or algorithm. You can run and modify the code in your preferred development environment to better understand how each component works.
 
 <!-- Clone the repository -->
-git clone https://github.com/your-username/java-dsa.git
+git clone https://github.com/rujuldwivedi/JavaDSA.git
 
 <!-- Change directory to the cloned repository -->
 cd java-dsa
