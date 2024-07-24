@@ -6,12 +6,12 @@ Welcome to the **Data Structures and Algorithms in Java** repository! 🎉 This 
 
 ## Table of Contents 📑
 
-1. # *Introduction*
-2. # *Usage*
-3. # *Features*
-4. # *Contributing*
-5. # *File Structure*
-6. # *Acknowledgements*
+1. *Introduction*
+2. *Usage*
+3. *Features*
+4. *Contributing*
+5. *File Structure*
+6. *Acknowledgements*
 
 ## Introduction 🌟
 
