@@ -1,69 +1,100 @@
-import java.util.*;
-
-class MergeSort
+public class MergeSort
 {
-    //Using Merge Sort
-    public int[] sortArray(int[] nums)
+
+    /*
+     * Here we'll do the following:
+     * 1. Merge Sort
+     */
+
+    // Function to sort an array using merge sort
+    public static void mergeSort(int[] arr, int low, int high)
     {
-        mergeSort(nums, 0, nums.length-1);
-        return nums;
-    }
-    public void mergeSort(int []arr, int low, int high)
-    {
-        if(low >= high)
-        return;
-        int mid = low + (high-low)/2;
-        mergeSort(arr, low, mid); //Sort left half
-        mergeSort(arr, mid+1, high); //Sort right half
-        merge(arr, low, high, mid); //Merge the two halves
-    }
-    public void merge(int []arr, int low, int high, int mid)
-    {
-        ArrayList<Integer> temp = new ArrayList<>(); //Temporary array to store the sorted elements
-        int left = low; //Pointer for left half
-        int right = mid+1; //Pointer for right half
-        while(left <= mid && right <= high)
+        // If the low index is less than the high index, then the array has more than one element
+        // else it has only one element and then it is already sorted
+        if(low >=high)
+            return;
+        else
         {
-            if(arr[left] <= arr[right])
-            //If element in left half is smaller than element in right half, add the left element
+            // Find the middle index of the array
+            int mid = low + (high - low) / 2;
+
+            // Recursively sort the two halves of the array
+            mergeSort(arr, low, mid);
+            mergeSort(arr, mid + 1, high);
+
+            // Merge the two halves
+            merge(arr, low, mid, high);
+        }
+    }
+
+    // Function to merge the two halves of the array
+    public static void merge(int[] arr, int low, int mid, int high)
+    {
+        // Find the sizes of the two halves
+        int n1 = mid - low + 1;
+        int n2 = high - mid;
+
+        // Create two temporary arrays
+        int[] L = new int[n1];
+        int[] R = new int[n2];
+
+        // Copy the elements of the left half to the left temporary array
+        for(int i = 0; i < n1; i++)
+            L[i] = arr[low + i];
+
+        // Copy the elements of the right half to the right temporary array
+        for(int j = 0; j < n2; j++)
+            R[j] = arr[mid + 1 + j];
+
+        // Merge the two temporary arrays
+
+        // Initial indexes of the two halves
+        int i = 0, j = 0;
+
+        // Initial index of the merged array
+        int k = low;
+
+        while(i < n1 && j < n2)
+        {
+            if(L[i] <= R[j])
             {
-                temp.add(arr[left]);
-                left++;
+                arr[k] = L[i];
+                i++;
             }
             else
-            //If element in right half is smaller than element in left half, add the right element
             {
-                temp.add(arr[right]);
-                right++;
+                arr[k] = R[j];
+                j++;
             }
+            k++;
         }
-        while(left <= mid)
-        //If there are any elements left in the left half, add them
+
+        // Copy the remaining elements of L[] if there are any
+        while(i < n1)
         {
-            temp.add(arr[left]);
-            left++;
+            arr[k] = L[i];
+            i++;
+            k++;
         }
-        while(right <= high)
-        //If there are any elements left in the right half, add them
+
+        // Copy the remaining elements of R[] if there are any
+        while(j < n2)
         {
-            temp.add(arr[right]);
-            right++;
+            arr[k] = R[j];
+            j++;
+            k++;
         }
-        for(int i=low; i<= high; i++)
-        //Copy the sorted elements back to the original array
-        arr[i] = temp.get(i-low);
-        //Note: i-low is used to get the index of the element in the temporary array
-        //How it works: i is the index of the original array, low is the starting index of the subarray
-        //so i-low gives the index of the element in the temporary array
     }
+
+    /*
+     * The time complexity of merge sort is O(nlogn) in all the cases.
+     */
+
     public static void main(String[] args)
     {
-        MergeSort obj = new MergeSort();
-        int []arr = {5, 2, 3, 1};
-        System.out.println(Arrays.toString(obj.sortArray(arr)));
-        System.out.println("Time: "+ System.nanoTime());
-        Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
-        System.out.println("Time: "+ System.nanoTime());
+        int[] arr = { 3, 1, 2, 4, 0, 1, 3, 2 };
+        mergeSort(arr, 0, arr.length - 1);
+        for(int i = 0; i < arr.length; i++)
+            System.out.print(arr[i] + " ");
     }
 }

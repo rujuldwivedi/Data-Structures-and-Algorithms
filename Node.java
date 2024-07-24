@@ -1,41 +1,33 @@
-import java.util.*;
-class Node
+public class Node
 {
-    static Scanner sc = new Scanner(System.in);
-    int value;
-    Node left;
-    Node right;
-    int start;
-    int end;
-    Node next;
+
+    /*
+     * Here we'll do the following:
+     * 1. Implement a singly linked list that can be used in other programs.
+     */
+
+    int data;
     int height;
-    Node(int value)
+    public Node prev;
+    public Node next;
+    public Node child;
+    public Node left;
+    public Node right;
+    Node random;
+
+    public Node(int data)
     {
-        this.value=value;
+        this.data = data;
+        this.height = 1;
+        this.next = null;
+        this.child = null;
+        this.prev = null;
+        this.left = null;
+        this.right = null;
+        this.random = null;
     }
-    public Node (int start, int end)
-    {
-      this.start = start;
-      this.end = end;
-    }
-    public Node root;
-    // public Node createTree()
-    // {
-    //     System.out.println("Enter value: ");
-    //     int value = sc.nextInt();
-    //     if(value==-1)
-    //     return null;
-    //     root = new Node(value);
-    //     System.out.println("Enter left of "+value);
-    //     root.left = createTree();
-    //     System.out.println("Enter right of "+value);
-    //     root.right = createTree();
-    //     return root;
-    // }
     public static void main(String[] args)
     {
-        // Node root = new Node(1);
-        // root.createTree();
-        // sc.close();
+        System.out.println();
     }
 }

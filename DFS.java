@@ -1,166 +1,152 @@
 import java.util.*;
-class DFS extends Node
+
+public class DFS extends Graphs
 {
-    DFS(int value)
+
+    /*
+     * Here we'll do the following:
+     * 1. Perform DFS on a graph
+     * 2. Find the number of connected components in a graph
+     * 3. Find the minimum distance from a source node to a destination node
+     */
+
+    public DFS(int v)
     {
-      super(value);
+        super(v);
     }
-  void dfsStack(Node node)
-  {
-    if(node == null)
-    return;
-    Stack<Node> stack = new Stack<>();
-    stack.push(node);
-    while(!stack.isEmpty())
+
+    // Perform DFS on a graph
+    public static void dfs(Graphs graph, int start, int end)
     {
-      Node removed = stack.pop();
-      System.out.print(removed.value + " ");
-      if(removed.right != null)
-      stack.push(removed.right);
-      if(removed.left != null)
-      stack.push(removed.left);
+        // Create a boolean array to keep track of visited nodes
+        boolean[] visited = new boolean[graph.V];
+
+        // Create a stack for DFS
+        Stack<Integer> stack = new Stack<>();
+
+        // Mark the current node as visited and push it to the stack
+        visited[start] = true;
+        stack.push(start);
+
+        while (!stack.isEmpty())
+        {
+            // Pop a node from the stack and print it
+            start = stack.pop();
+            System.out.print(start + " ");
+
+            // Get all the nodes connected to the current node
+            // If a connected node has not been visited, mark it as visited and push it to the stack
+            for (int node : graph.adjList[start])
+            {
+                if (!visited[node])
+                {
+                    visited[node] = true;
+                    stack.push(node);
+                }
+            }
+        }
     }
-  }
-  int diameter = 0;
-  public int diameterOfBinaryTree(Node root)
-  {
-    height(root);
-    return diameter-1;
-  }
-  int height(Node node)
-  {
-    if(node == null)
-    return 0;
-    int leftHeight = height(node.left);
-    int rightHeight = height(node.right);
-    int dia = leftHeight + rightHeight + 1;
-    diameter = Math.max(diameter, dia);
-    return Math.max(leftHeight, rightHeight) + 1;
-  }
-  public Node invertTree(Node root)
-  {
-    if (root == null)
-    return null;
-    Node left = invertTree(root.left);
-    Node right = invertTree(root.right);
-    root.left = right;
-    root.right = left;
-    return root;
-  }
-  public void flatten(Node root)
-  {
-    Node current = root;
-    while (current != null)
+
+    // Find the number of connected components in a graph
+    public static int connectedComponents(Graphs graph)
     {
-      if (current.left != null)
-      {
-        Node temp = current.left;
-        while(temp.right != null)
-        temp = temp.right;
-        temp.right = current.right;
-        current.right = current.left;
-        current.left= null;
-      }
-      current = current.right;
+        // Create a boolean array to keep track of visited nodes
+        boolean[] visited = new boolean[graph.V];
+
+        // Create a stack for DFS
+        Stack<Integer> stack = new Stack<>();
+
+        int count = 0;
+
+        for (int i = 0; i < graph.V; i++)
+        {
+            if (!visited[i])
+            {
+                visited[i] = true;
+                stack.push(i);
+                count++;
+
+                while (!stack.isEmpty())
+                {
+                    int start = stack.pop();
+
+                    for (int node : graph.adjList[start])
+                    {
+                        if (!visited[node])
+                        {
+                            visited[node] = true;
+                            stack.push(node);
+                        }
+                    }
+                }
+            }
+        }
+
+        return count;
     }
-  }
-  public boolean helper(Node node, Integer low, Integer high)
-  {
-    if (node == null)
-    return true;
-    if (low != null && node.value <= low)
-    return false;
-    if(high != null && node.value >= high)
-    return false;
-    boolean leftTree = helper(node.left, low, node.value);
-    boolean rightTree = helper(node.right, node.value, high);
-    return leftTree && rightTree;
-  }
-  public boolean isvalueidBST(Node root)
-  {
-        return helper(root, null, null);
-  }
-    public Node lowestCommonAncestor(Node root, Node p, Node q) {
-      if (root == null)
-      return null;
-      if (root == p || root == q)
-      return root;
-      Node left = lowestCommonAncestor(root.left, p, q);
-      Node right = lowestCommonAncestor(root.right, p, q);
-      if (left != null && right != null)
-      return root;
-      return left == null ? right : left;
-    }
-    int count = 0;
-    public Node helper(Node root, int k)
+
+    // Find the minimum distance from a source node to a destination node
+    public static int minDistance(Graphs graph, int start, int end)
     {
-      if (root == null)
-      return null;
-      Node left = helper(root.left, k);
-      if (left != null)
-      return left;
-      count++;
-      if(count == k)
-      return root;
-      return helper(root.right, k);
+        // Create a boolean array to keep track of visited nodes
+        boolean[] visited = new boolean[graph.V];
+
+        // Create a stack for DFS
+        Stack<Integer> stack = new Stack<>();
+
+        // Create an array to store the distance of each node from the source node
+        int[] distance = new int[graph.V];
+
+        // Mark the current node as visited and push it to the stack
+        visited[start] = true;
+        stack.push(start);
+
+        while (!stack.isEmpty())
+        {
+            // Pop a node from the stack
+            start = stack.pop();
+
+            // Get all the nodes connected to the current node
+            // If a connected node has not been visited, mark it as visited, push it to the stack and update its distance
+            for (int node : graph.adjList[start])
+            {
+                if (!visited[node])
+                {
+                    visited[node] = true;
+                    stack.push(node);
+                    distance[node] = distance[start] + 1;
+                }
+            }
+        }
+
+        return distance[end];
     }
-    public int kthSmallest(Node root, int k)
-    {
-        return helper(root, k).value;
-    }
-    public Node buildTree(int[] preorder, int[] inorder)
-    {
-      if (preorder.length == 0)
-      return null;
-      int r = preorder[0];
-      int index = 0;
-      for(int i=0; i<inorder.length; i++)
-      {
-        if(inorder[i] == r)
-        index = i;
-      }
-      Node node = new Node(r);
-      node.left = buildTree(Arrays.copyOfRange(preorder, 1, index + 1), Arrays.copyOfRange(inorder, 0, index));
-      node.right = buildTree(Arrays.copyOfRange(preorder, index + 1, preorder.length), Arrays.copyOfRange(inorder, index + 1, inorder.length));
-      return node;
-    }
-    public static List<List<Integer>> findPaths(Node node, int sum) {
-      List<List<Integer>> paths = new ArrayList<>();
-      List<Integer> path = new ArrayList<>();
-      helper(node, sum, path,paths);
-      return paths;
-    }
-    public static void helper(Node node, int sum, List<Integer> path, List<List<Integer>> paths)
-    {
-      if(node == null)
-      return ;
-      path.add(node.value);
-      if (node.value == sum && node.left == null && node.right == null)
-      paths.add(new ArrayList<>(path));
-      else
-      {
-        helper(node.left, sum-node.value, path, paths);
-        helper(node.right, sum-node.value, path, paths);
-      }
-      // backtrack
-      path.remove(path.size() - 1);    
-    } 
+
     public static void main(String[] args)
     {
-      DFS tree = new DFS(1);
-      tree.left = new DFS(2);
-      tree.right = new DFS(3);
-      tree.left.left = new DFS(4);
-      tree.left.right = new DFS(5);
-      tree.right.left = new DFS(6);
-      tree.right.right = new DFS(7);
-      tree.dfsStack(tree);
-      System.out.println();
-      System.out.println(tree.diameterOfBinaryTree(tree));
-      System.out.println(tree.isvalueidBST(tree));
-      System.out.println(tree.kthSmallest(tree, 3));
-      System.out.println(tree.buildTree(new int[]{3,9,20,15,7}, new int[]{9,3,15,20,7}));
-      System.out.println(tree.lowestCommonAncestor(tree, tree.left.left, tree.left.right).value);
-      System.out.println(findPaths(tree, 0) + " " + findPaths(tree, 8));
+        // Create a graph
+        int vertices = 6;
+        Graphs graph = new Graphs(vertices);
+
+        // Add edges to the graph
+        graph.addEdgeList(0, 1);
+        graph.addEdgeList(0, 2);
+        graph.addEdgeList(1, 4);
+        graph.addEdgeList(2, 3);
+        graph.addEdgeList(3, 4);
+        graph.addEdgeList(4, 5);
+        graph.addEdgeList(3, 5);
+        graph.addEdgeList(0, 4);
+
+        // Perform DFS on the graph
+        System.out.println("DFS traversal of the graph:");
+        dfs(graph, 0, 4);
+        System.out.println();
+
+        // Find the number of connected components in the graph
+        System.out.println("Number of connected components in the graph: " + connectedComponents(graph));
+
+        // Find the minimum distance from a source node to a destination node
+        System.out.println("Minimum distance from source to destination: " + minDistance(graph, 0, 5));
     }
 }
