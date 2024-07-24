@@ -11,7 +11,7 @@ Welcome to the **Data Structures and Algorithms in Java** repository! 🎉 This 
 3. [Features](#features)
 4. [Contributing](#contributing)
 5. [File Structure](#file-structure)
-6. [License](#license)
+6. [Acknowledgements](#acknowledgements)
 
 ## Introduction 🌟
 
