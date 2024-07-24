@@ -42,7 +42,7 @@ cd JavaDSA
 
 ## Contributing 🤝
 
-Contributions are welcome! If you'd like to add a new data structure, algorithm, or improve existing code, please follow the [contribution guidelines](CONTRIBUTING.md). Your insights and expertise will make this repository even more valuable for the community.
+Contributions are welcome! If you'd like to add a new data structure, algorithm, or improve existing code, please do. Your insights and expertise will make this repository even more valuable for the community.
 
 ## File Structure 🗂️
 
@@ -68,7 +68,7 @@ Special thanks to the following individuals for their inspiration and guidance:
 
 - [Navdeep Singh](https://www.linkedin.com/in/navdeep-singh-3aaa14161) (Neetcode)
 - [Anuj Kumar Sharma](https://www.linkedin.com/in/sharma-kumar-anuj) (Anuj Bhaiya)
-- [Kunal Kushwaha](https://www.linkedin.com/in/kunal-kushwaha)
+- [Kunal Kushwaha](https://www.linkedin.com/in/kunal-kushwaha) (KunalOnYT)
 
 Their tutorials, insights, and support have been invaluable in the creation of this repository.
 
