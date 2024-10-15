@@ -1,8 +1,6 @@
-# Data Structures and Algorithms in Java 🚀
+# JavaRithm 🚀
 
-Welcome to the **Data Structures and Algorithms in Java** repository! 🎉 This repository is a meticulously curated collection of Java files, covering a wide spectrum of data structures and algorithms. It's a treasure trove for anyone eager to dive deep into the fundamentals of computer science or enhance their problem-solving skills. Whether you're a student, a seasoned developer, or just curious about the intricacies of algorithms, this repository has something valuable for you.
-
-![Java-DSA](https://github.com/rujuldwivedi/Java-DSA/blob/main/java-dsa-banner.png)
+Welcome to the **JavaRithm**! 🎉 This repository is a meticulously curated collection of Java files, covering a wide spectrum of data structures and algorithms. It's a treasure trove for anyone eager to dive deep into the fundamentals of computer science or enhance their problem-solving skills. Whether you're a student, a seasoned developer, or just curious about the intricacies of algorithms, this repository has something valuable for you.
 
 ## Table of Contents 📑
 
