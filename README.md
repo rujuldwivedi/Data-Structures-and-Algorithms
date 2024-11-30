@@ -64,9 +64,10 @@ The repository is organized into directories based on the type of data structure
 
 Special thanks to the following individuals for their inspiration and guidance:
 
+- [Gaurav Sen](https://www.linkedin.com/in/gkcs) (GKCS)
+- [Kunal Kushwaha](https://www.linkedin.com/in/kunal-kushwaha) (KunalOnYT)
 - [Navdeep Singh](https://www.linkedin.com/in/navdeep-singh-3aaa14161) (Neetcode)
 - [Anuj Kumar Sharma](https://www.linkedin.com/in/sharma-kumar-anuj) (Anuj Bhaiya)
-- [Kunal Kushwaha](https://www.linkedin.com/in/kunal-kushwaha) (KunalOnYT)
 
 Their tutorials, insights, and support have been invaluable in the creation of this repository.
 
