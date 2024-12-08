@@ -11,7 +11,7 @@
 
 ## Overview
 
-Welcome to the **JavaRithm**! 🎉 This repository is a meticulously curated collection of Java files, covering a wide spectrum of data structures and algorithms. It's a treasure trove for anyone eager to dive deep into the fundamentals of computer science or enhance their problem-solving skills. Whether you're a student, a seasoned developer, or just curious about the intricacies of algorithms, this repository has something valuable for you. Each file contains well-documented code, enriched with comments explaining the purpose, implementation details, and usage of specific data structures or algorithms. The examples range from basic to advanced, catering to beginners and experienced developers alike.
+Welcome to the **JavaRithm**! This repository is a meticulously curated collection of Java files, covering a wide spectrum of data structures and algorithms. It's a treasure trove for anyone eager to dive deep into the fundamentals of computer science or enhance their problem-solving skills. Whether you're a student, a seasoned developer, or just curious about the intricacies of algorithms, this repository has something valuable for you. Each file contains well-documented code, enriched with comments explaining the purpose, implementation details, and usage of specific data structures or algorithms. The examples range from basic to advanced, catering to beginners and experienced developers alike.
 
 ## Usage 
 
@@ -40,7 +40,7 @@ cd JavaDSA
 
 Contributions are welcome! If you'd like to add a new data structure, algorithm, or improve existing code, please do. Your insights and expertise will make this repository even more valuable for the community.
 
-## Acknowledgements 🙏
+## Acknowledgements 
 
 Special thanks to the following individuals for their inspiration and guidance:
 
@@ -53,4 +53,4 @@ Their tutorials, insights, and support have been invaluable in the creation of t
 
 Each directory contains Java files with corresponding implementations, detailed explanations, and example use cases.
 
-Happy coding! 😊 If you find this repository helpful, don't forget to ⭐ star it and share it with others!
+Happy coding! If you find this repository helpful, don't forget to star it and share it with others!
