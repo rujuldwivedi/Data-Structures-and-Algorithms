@@ -1,21 +1,19 @@
-# JavaRithm 🚀
+# JavaRithm 
 
-Welcome to the **JavaRithm**! 🎉 This repository is a meticulously curated collection of Java files, covering a wide spectrum of data structures and algorithms. It's a treasure trove for anyone eager to dive deep into the fundamentals of computer science or enhance their problem-solving skills. Whether you're a student, a seasoned developer, or just curious about the intricacies of algorithms, this repository has something valuable for you.
+![Project Banner](java-dsa-banner.png)
 
-## Table of Contents 📑
+## Table of Contents 
+- [Overview](#overview)
+- [Usage](#usage)
+- [Feature](#feature)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
 
-1. *Introduction*
-2. *Usage*
-3. *Features*
-4. *Contributing*
-5. *File Structure*
-6. *Acknowledgements*
+## Overview
 
-## Introduction 🌟
+Welcome to the **JavaRithm**! 🎉 This repository is a meticulously curated collection of Java files, covering a wide spectrum of data structures and algorithms. It's a treasure trove for anyone eager to dive deep into the fundamentals of computer science or enhance their problem-solving skills. Whether you're a student, a seasoned developer, or just curious about the intricacies of algorithms, this repository has something valuable for you. Each file contains well-documented code, enriched with comments explaining the purpose, implementation details, and usage of specific data structures or algorithms. The examples range from basic to advanced, catering to beginners and experienced developers alike.
 
-This repository is designed to offer a hands-on approach to learning and implementing various data structures and algorithms using the Java programming language. Each file contains well-documented code, enriched with comments explaining the purpose, implementation details, and usage of specific data structures or algorithms. The examples range from basic to advanced, catering to beginners and experienced developers alike.
-
-## Usage 💻
+## Usage 
 
 Feel free to explore and use the code for educational purposes. Each Java file is self-contained and includes:
 
@@ -30,7 +28,7 @@ git clone https://github.com/rujuldwivedi/Java-DSA
 cd JavaDSA
 ```
 
-## Features ✨
+## Features 
 
 - **Comprehensive Coverage**: Includes a wide range of data structures like Linked Lists, Binary Trees, Heaps, Graphs, and more.
 - **Algorithm Implementation**: Covers sorting, searching, dynamic programming, graph algorithms, and others.
@@ -38,27 +36,9 @@ cd JavaDSA
 - **Educational Value**: Designed to aid in academic studies, competitive programming, and professional development.
 - **Hand-Coded with Love**: Every file is carefully crafted and reviewed to ensure high-quality, readable code.
 
-## Contributing 🤝
+## Contributing 
 
 Contributions are welcome! If you'd like to add a new data structure, algorithm, or improve existing code, please do. Your insights and expertise will make this repository even more valuable for the community.
-
-## File Structure 🗂️
-
-The repository is organized into directories based on the type of data structure or algorithm:
-
-```bash
-/Java-DSA
-    LinkedList.java
-    BinaryTree.java
-    ...
-    Sorting.java
-    Searching.java
-    ...
-    OOPS.java
-    StreamAPI.java
-    ...
-    README.md
-```
 
 ## Acknowledgements 🙏
 
