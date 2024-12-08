@@ -1,6 +1,6 @@
 # JavaRithm 
 
-![Project Banner](banner.jpg)
+![Project Banner](java-dsa-banner.png)
 
 ## Table of Contents 
 - [Overview](#overview)
