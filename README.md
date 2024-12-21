@@ -1,4 +1,4 @@
-# Java-DSA Repository
+# Java-DSA
 
 ![Image](github-banner.svg)
 
