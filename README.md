@@ -2,7 +2,7 @@
 
 ![Image](banner.png)
 
-Welcome to my **Java-DSA (Data Structures and Algorithms)** repository! This repository is a comprehensive collection of code and solutions covering a wide range of Data Structures, Algorithms, and problem-solving approaches implemented in Java. It serves as both a study resource and a showcase of my understanding and application of computer science fundamentals.
+Welcome to my **Java-DSA (Data Structures and Algorithms with Java)** repository! This repository is a comprehensive collection of code and solutions covering a wide range of Data Structures, Algorithms, and problem-solving approaches implemented in Java. It serves as both a study resource and a showcase of my understanding and application of computer science fundamentals.
 
 ---
 
